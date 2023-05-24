@@ -15,7 +15,7 @@ export class ProductItemComponent {
   id: number = 0;
   url: string = '';
   description: string = '';
-  //quantity: number = 0;
+  quantity: number = 0;
 
   constructor () {
     this.product = {
@@ -28,8 +28,12 @@ export class ProductItemComponent {
     }
   }
 
-  addToCart(product: Product, quantity: number): void {
-    this.addProductToCart.emit([product, quantity]);
+  addToCart(p: Product, q: string): void {
+    const parsedQ = parseInt(q);
+    if (parsedQ) {
+      this.addProductToCart.emit([p, parsedQ]);
+      alert(`Added ${q} of ${p.name} to cart`);
+    }
   }
 
   ngOnInit() {}

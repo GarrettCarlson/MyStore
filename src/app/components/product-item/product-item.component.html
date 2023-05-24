@@ -1,8 +1,12 @@
-<h3>{{product.name}}</h3>
-<img src={{product.url}} width="100" height="100" style="border:5px solid black">
-<p>{{product.description}}</p>
-<p>{{product.price}}</p>
-<label for="quantity">Quantity:</label>
-<input type="range" id="quantity" name="quantity" min="0" max="10">
-<button id="add-to-cart" name="Add to Cart">Add To Cart</button>
-<br>
+<div class="product-container">
+    <h3>{{product.name}}</h3>
+    <img src={{product.url}} class="product-image">
+    <p>{{product.description}}</p>
+    <p>{{product.price}}</p>
+    <div class="select-input">
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" name="quantity" placeholder="0" min="0" max="10" #quantity>
+      <button (click)="addToCart(product, quantity.value)">Add To Cart</button>
+    </div>
+  </div>
+  <br>
