@@ -1,0 +1,247 @@
+[
+  {
+      "id": 1,
+      "name": "Berserker Ring",
+      "price": 1.28,
+      "url": "https://oldschool.runescape.wiki/images/Berserker_ring_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 2,
+      "name": "Dragon Defender",
+      "price": 2.25,
+      "url": "https://oldschool.runescape.wiki/images/Dragon_defender_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 3,
+      "name": "Pharaoh's Sceptre",
+      "price": 9.5,
+      "url": "https://oldschool.runescape.wiki/images/Pharaoh%27s_sceptre_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 4,
+      "name": "Bow of Faerdhinen",
+      "price": 80,
+      "url": "https://oldschool.runescape.wiki/images/Bow_of_faerdhinen_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 5,
+      "name": "Bandos Chestplate",
+      "price": 15.24,
+      "url": "https://oldschool.runescape.wiki/images/Bandos_chestplate_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 6,
+      "name": "Bandos Tassets",
+      "price": 15.24,
+      "url": "https://oldschool.runescape.wiki/images/Bandos_tassets_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 7,
+      "name": "Bandos Godsword",
+      "price": 20.32,
+      "url": "https://oldschool.runescape.wiki/images/Bandos_godsword_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 8,
+      "name": "Zamorakian Hasta",
+      "price": 5.08,
+      "url": "https://oldschool.runescape.wiki/images/Zamorakian_hasta_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 9,
+      "name": "Zenyte Shard",
+      "price": 4.615384615384615,
+      "url": "https://oldschool.runescape.wiki/images/Zenyte_shard_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 10,
+      "name": "Neitiznot Faceguard",
+      "price": 25,
+      "url": "https://oldschool.runescape.wiki/images/Neitiznot_faceguard_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 11,
+      "name": "Primordial Boots",
+      "price": 8.39344262295082,
+      "url": "https://oldschool.runescape.wiki/images/Primordial_boots_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 12,
+      "name": "Blowpipe",
+      "price": 12.8,
+      "url": "https://oldschool.runescape.wiki/images/Blowpipe_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 13,
+      "name": "Toxic Trident",
+      "price": 12.8,
+      "url": "https://oldschool.runescape.wiki/images/Toxic_trident_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 14,
+      "name": "Dragon Warhammer",
+      "price": 33.333333333333336,
+      "url": "https://oldschool.runescape.wiki/images/Dragon_warhammer_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 15,
+      "name": "Dragon Hunter Lance",
+      "price": 30.333333333333332,
+      "url": "https://oldschool.runescape.wiki/images/Dragon_hunter_lance_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 16,
+      "name": "Ferocious Gloves",
+      "price": 15.575757575757578,
+      "url": "https://oldschool.runescape.wiki/images/Ferocious_gloves_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 17,
+      "name": "Dexterous Prayer Scroll",
+      "price": 17.250000000000004,
+      "url": "https://oldschool.runescape.wiki/images/Dexterous_prayer_scroll_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 18,
+      "name": "Arcane Prayer Scroll",
+      "price": 17.250000000000004,
+      "url": "https://oldschool.runescape.wiki/images/Arcane_prayer_scroll_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 19,
+      "name": "Osmumten's Fang",
+      "price": 51.421284297996614,
+      "url": "https://oldschool.runescape.wiki/images/Osmumten's_fang_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 20,
+      "name": "Avernic Defender",
+      "price": 7.203333333333333,
+      "url": "https://oldschool.runescape.wiki/images/Avernic_defender_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 21,
+      "name": "Masori Mask",
+      "price": 179.98560115190784,
+      "url": "https://oldschool.runescape.wiki/images/Masori_mask_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 22,
+      "name": "Masori Top",
+      "price": 179.98560115190784,
+      "url": "https://oldschool.runescape.wiki/images/Masori_top_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 23,
+      "name": "Masori Chaps",
+      "price": 179.98560115190784,
+      "url": "https://oldschool.runescape.wiki/images/Masori_chaps_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 24,
+      "name": "Masori Mask (f)",
+      "price": 9.525,
+      "url": "https://oldschool.runescape.wiki/images/Masori_mask_(f)_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 25,
+      "name": "Masori Top (f)",
+      "price": 9.525,
+      "url": "https://oldschool.runescape.wiki/images/Masori_top_(f)_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 26,
+      "name": "Masori Chaps (f)",
+      "price": 9.525,
+      "url": "https://oldschool.runescape.wiki/images/Masori_chaps_(f)_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 27,
+      "name": "Armadyl Crossbow",
+      "price": 9.236363636363636,
+      "url": "https://oldschool.runescape.wiki/images/Armadyl_crossbow_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 28,
+      "name": "Zaryte Vambraces",
+      "price": 13.230769230769232,
+      "url": "https://oldschool.runescape.wiki/images/Zaryte_vambraces_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 29,
+      "name": "Zaryte Crossbow",
+      "price": 19.846153846153847,
+      "url": "https://oldschool.runescape.wiki/images/Zaryte_crossbow_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 30,
+      "name": "Torva Full Helm",
+      "price": 19.846153846153847,
+      "url": "https://oldschool.runescape.wiki/images/Torva_full_helm_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 31,
+      "name": "Torva Platebody",
+      "price": 19.846153846153847,
+      "url": "https://oldschool.runescape.wiki/images/Torva_platebody_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 32,
+      "name": "Torva Platelegs",
+      "price": 19.846153846153847,
+      "url": "https://oldschool.runescape.wiki/images/Torva_platelegs_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 33,
+      "name": "Tumeken's Shadow",
+      "price": 359.9712023038157,
+      "url": "https://oldschool.runescape.wiki/images/Tumeken's_shadow_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 34,
+      "name": "Scythe of Vitur",
+      "price": 57.66666666666667,
+      "url": "https://oldschool.runescape.wiki/images/Scythe_of_vitur_detail.png",
+      "description": "placeholder description"
+  },
+  {
+      "id": 35,
+      "name": "Twisted Bow",
+      "price": 172.5,
+      "url": "https://oldschool.runescape.wiki/images/Twisted_bow_detail.png",
+      "description": "placeholder description"
+  }
+]
