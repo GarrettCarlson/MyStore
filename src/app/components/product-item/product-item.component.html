@@ -1,12 +1,20 @@
 <div class="product-container">
-    <h3>{{product.name}}</h3>
-    <img src={{product.url}} class="product-image">
-    <p>{{product.description}}</p>
-    <p>{{product.price}} EHP</p>
-    <div class="select-input">
-      <label for="quantity">Quantity:</label>
-      <input type="number" id="quantity" name="quantity" placeholder="0" min="0" max="10" #quantity>
-      <button (click)="addToCart(product, quantity.value)">Add To Cart</button>
-    </div>
+  <h3>{{ product.name }}</h3>
+  <img src="{{ product.url }}" class="product-image" />
+  <p>{{ product.description }}</p>
+  <p>{{ product.price }} EHP</p>
+  <div class="select-input">
+    <label for="quantity">Quantity:</label>
+    <input
+      type="number"
+      id="quantity"
+      name="quantity"
+      placeholder="0"
+      min="0"
+      max="10"
+      #quantity
+    />
+    <button (click)="addToCart(product, quantity.value)">Add To Cart</button>
   </div>
-  <br>
+</div>
+<br />
