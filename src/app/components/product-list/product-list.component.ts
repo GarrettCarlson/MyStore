@@ -30,7 +30,7 @@ export class ProductListComponent {
       alert(`Added ${product.quantity} ${product.name} to cart`);
     }
 
-    this.cartService.addProduct(product);
+    this.cartService.addProductToCart(product);
   }
 
   markAsFavorite(product: Product): void {

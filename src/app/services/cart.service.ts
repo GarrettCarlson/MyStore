@@ -5,17 +5,28 @@ import { Product } from '../models/product';
   providedIn: 'root'
 })
 export class CartService {
-  products: Product[] = [];
+  private cartKey = 'cart';
 
   constructor() {}
 
-  addProduct(product: Product): void {
-    this.products.push(product);
-    console.log(`${product.quantity} of ${product.name} added to cart`)
-    console.log(`${this.products}`);
+  getCart(): Product[] {
+    const cartData = localStorage.getItem(this.cartKey);
+    return cartData ? JSON.parse(cartData) : [];
   }
 
-  getProducts(): Product[] {
-    return this.products;
+  addProductToCart(product: Product): void {
+    const cart = this.getCart();
+    cart.push(product);
+    localStorage.setItem(this.cartKey, JSON.stringify(cart));
+  }
+
+  removeProductFromCart(product: Product): void {
+    const cart = this.getCart();
+    const updatedCart = cart.filter(p => p.id !== product.id);
+    localStorage.setItem(this.cartKey, JSON.stringify(updatedCart));
+  }
+
+  clearCart(): void {
+    localStorage.removeItem(this.cartKey);
   }
 }

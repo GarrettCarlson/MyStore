@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Product } from '../models/product';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable({
@@ -13,5 +13,19 @@ export class ProductService {
 
   getProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.productDataFile);
+  }
+  getProduct(id: number): Observable<Product> {
+    return this.http.get<Product[]>(this.productDataFile).pipe(
+      map((products: Product[]) => {
+        const product = products.find((p: Product) => p.id == id);
+        if (product) {
+          return product;
+        } else {
+          console.log(products);
+          console.log(id);
+          throw new Error('Product not found');
+        }
+      })
+    );
   }
 }
