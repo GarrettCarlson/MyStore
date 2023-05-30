@@ -10,6 +10,7 @@ import { ProductItemComponent } from './components/product-item/product-item.com
 import { ProductListComponent } from './components/product-list/product-list.component';
 import { HeaderComponent } from './layout/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     ProductItemComponent,
     ProductListComponent,
     HeaderComponent,
+    NavbarComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],

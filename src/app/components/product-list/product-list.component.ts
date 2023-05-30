@@ -19,7 +19,16 @@ export class ProductListComponent {
     });
   }
 
-  addProductToCart(product: Product, quantity: number): void {
-    alert('Product added to cart!');
+  addProductToCart(p: Product): void {
+    if (p.quantity == 1) {
+      alert(`Added ${p.name} to cart`);
+    } else {
+      alert(`Added ${p.quantity} ${p.name} to cart`);
+    }
   }
+
+  markAsFavorite(p: Product): void {
+    alert(`${p.name} has been added to favorites.`);
+  }
+
 }

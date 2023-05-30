@@ -1,0 +1,20 @@
+.title {
+    font-family: Arial, Helvetica, sans-serif;
+    justify-self: left;
+    font-size: large;
+}
+.cart {
+    font-family: Arial, Helvetica, sans-serif;
+    justify-self: right;
+    font-size: large;
+}
+
+  .navbar {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  .navbar-item-container {
+    display: flex;
+    justify-content: space-between;
+    max-width: auto;
+  }

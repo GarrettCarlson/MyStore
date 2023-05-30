@@ -1,12 +1,19 @@
 .product-index {
+  font-family: Arial, Helvetica, sans-serif;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 1024px;
-  margin-bottom: 64px;
+  max-width: auto;
+  margin-bottom: 30px;
 }
 
 .product-container {
   display: flex;
   justify-content: center;
+}
+
+h1 {
+  color: #cbd9f4;
+  margin-left: 20px;
+  font-family: Arial, Helvetica, sans-serif;
 }

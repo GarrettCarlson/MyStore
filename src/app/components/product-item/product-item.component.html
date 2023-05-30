@@ -1,11 +1,14 @@
 <div class="product-container">
   <h3>{{ product.name }}</h3>
   <img src="{{ product.url }}" class="product-image" />
+  <div class="description">
   <p>{{ product.description }}</p>
-  <p>{{ product.price }} EHP</p>
+</div>
+  <p class="price">{{ product.price.toFixed(1) }} EHP</p>
   <div class="select-input">
     <label for="quantity">Quantity:</label>
     <input
+        class="quantitySelector"
       type="number"
       id="quantity"
       name="quantity"
@@ -13,8 +16,10 @@
       min="0"
       max="10"
       #quantity
+      (input)="updateProductQuantity(quantity.value)"
     />
-    <button (click)="addToCart(product, quantity.value)">Add To Cart</button>
+    <button (click)="addProductToCart.emit(product)">Add To Cart</button>
+    <button (click)="marked.emit(product)">Mark as favorite</button>
   </div>
 </div>
 <br />
