@@ -9,7 +9,6 @@ import { Product } from '../../models/product'
 export class ProductItemComponent {
   @Input() product: Product;
   @Output() addProductToCart: EventEmitter<Product> = new EventEmitter;
-  @Output() marked: EventEmitter<Product> = new EventEmitter;
 
   name: string = '';
   price: number = 0;

@@ -32,8 +32,4 @@ export class ProductListComponent {
 
     this.cartService.addProductToCart(product);
   }
-
-  markAsFavorite(product: Product): void {
-    alert(`${product.name} has been added to favorites.`);
-  }
 }

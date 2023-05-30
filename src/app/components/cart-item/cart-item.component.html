@@ -1,4 +1,5 @@
-<div class="cart-item-container">
+
+  <div class="cart-item">
     <h3>{{ product.name }}</h3>
     <img src="{{ product.url }}" class="product-image" />
     <p class="price">{{ product.price.toFixed(1) }} EHP each</p>
@@ -9,7 +10,7 @@
         type="number"
         id="quantity"
         name="quantity"
-        placeholder={{product.quantity}}
+        value={{product.quantity}}
         min="0"
         max="10"
         #quantity
@@ -19,4 +20,3 @@
     <p class="price">{{ (product.price * product.quantity).toFixed(1) }} EHP total</p>
     <button (click)="removeProductFromCart.emit(product)">Remove from Cart</button>
   </div>
-  <br />
