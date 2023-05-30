@@ -42,4 +42,7 @@ img {
   display: flex;
   justify-content: center;
   margin-top: 64px;
+  color: #cbd9f4;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: larger;
 }

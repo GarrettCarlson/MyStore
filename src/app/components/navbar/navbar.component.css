@@ -1,20 +1,31 @@
-.title {
-    font-family: Arial, Helvetica, sans-serif;
-    justify-self: left;
-    font-size: large;
-}
-.cart {
-    font-family: Arial, Helvetica, sans-serif;
-    justify-self: right;
-    font-size: large;
+.navbar {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: space-between;
+  background-color: #313e59;
+  padding: 10px;
+  color: #ffffff;
 }
 
-  .navbar {
-    font-family: Arial, Helvetica, sans-serif;
-  }
+.navbar-item-container {
+  display: flex;
+  align-items: center;
+}
 
-  .navbar-item-container {
-    display: flex;
-    justify-content: space-between;
-    max-width: auto;
-  }
+.home-link {
+  font-size: large;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  color: #313e59;
+  text-decoration: none;
+}
+
+.cart-link {
+  font-size: large;
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 5px;
+  color: #313e59;
+  text-decoration: none;
+}

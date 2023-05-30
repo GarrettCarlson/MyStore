@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Product } from '../../models/product';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-cart',
@@ -9,21 +10,9 @@ import { Product } from '../../models/product';
 export class CartComponent {
   products: Product[] = [];
 
-  constructor () {
-    this.products = [];
-  }
-
-  addProductToCart(p: Product): void {
-    this.products.push(p);
-    if (p.quantity == 1) {
-      alert(`Added ${p.name} to cart`);
-    } else {
-      alert(`Added ${p.quantity} ${p.name} to cart`);
-    }
-  }
+  constructor(private cartService: CartService) {}
 
   ngOnInit(): void {
-    this.products = [];
+    this.products = this.cartService.getProducts();
   }
-
 }

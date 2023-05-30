@@ -1,6 +1,7 @@
-import { Component, Output, EventEmitter } from '@angular/core';
+import { Component } from '@angular/core';
 import { Product } from '../../models/product';
 import { ProductService } from 'src/app/services/product.service';
+import { CartService } from 'src/app/services/cart.service';
 
 @Component({
   selector: 'app-product-list',
@@ -11,7 +12,10 @@ export class ProductListComponent {
   title: string = 'Products';
   products: Product[] = [];
 
-  constructor(private productService: ProductService) {}
+  constructor(
+    private productService: ProductService,
+    private cartService: CartService
+  ) {}
 
   ngOnInit(): void {
     this.productService.getProducts().subscribe((res) => {
@@ -19,16 +23,17 @@ export class ProductListComponent {
     });
   }
 
-  addProductToCart(p: Product): void {
-    if (p.quantity == 1) {
-      alert(`Added ${p.name} to cart`);
+  addProductToCart(product: Product): void {
+    if (product.quantity === 1) {
+      alert(`Added ${product.name} to cart`);
     } else {
-      alert(`Added ${p.quantity} ${p.name} to cart`);
+      alert(`Added ${product.quantity} ${product.name} to cart`);
     }
+
+    this.cartService.addProduct(product);
   }
 
-  markAsFavorite(p: Product): void {
-    alert(`${p.name} has been added to favorites.`);
+  markAsFavorite(product: Product): void {
+    alert(`${product.name} has been added to favorites.`);
   }
-
 }
