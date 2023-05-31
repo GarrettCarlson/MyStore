@@ -29,4 +29,13 @@ export class CartService {
   clearCart(): void {
     localStorage.removeItem(this.cartKey);
   }
+
+  getTotal(): number {
+    const cart = this.getCart();
+    let total = 0;
+    for (const product of cart) {
+     total += product.price;
+    }
+    return total;
+  }
 }

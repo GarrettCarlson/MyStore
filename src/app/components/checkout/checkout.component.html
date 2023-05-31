@@ -1,0 +1,18 @@
+<div class="form-title">
+<h1>Checkout</h1>
+</div>
+<div class="form-total">
+<h2>Total: {{cartTotal.toFixed(1)}} EHP</h2>
+</div>
+<form (ngSubmit)="onSubmit()" class="form">
+    <input type="text" required name="First Name" [(ngModel)]="firstName" placeholder="Name 1">
+    <input type="text" required name="Last Name" [(ngModel)]="lastName" placeholder="Name 2">
+    <input type="text" required email name="Email" [(ngModel)]="email" placeholder="Email">
+    <input type="text" required name="Address 1" [(ngModel)]="addressLine1" placeholder="Address 1">
+    <input type="text" required name="Address 2" [(ngModel)]="addressLine2" placeholder="Address 2">
+    <input type="text" required name="City" [(ngModel)]="city" placeholder="City">
+    <input type="text" required name="State" [(ngModel)]="state" placeholder="State">
+    <input type="text" required name="ZIP" [(ngModel)]="zipCode" placeholder="Zip Code">
+    <input type="text" required pattern="/4[0-9AB][1-9A-HJ-NP-Za-km-z]{93}$/g" name="Payment Address" [(ngModel)]="paymentAddress" placeholder="Payment Address (ETH)">
+    <button>Place Order</button>
+</form>

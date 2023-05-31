@@ -1,0 +1,24 @@
+.form-container {
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+    width: 20%;
+    color: azure;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 30%;
+    color: azure;
+}
+.form-title {
+    font-family: Arial, Helvetica, sans-serif;
+    color: azure;
+    font-size: large;
+}
+.form-total {
+    font-family: Arial, Helvetica, sans-serif;
+    color: seagreen;
+    font-size: medium;
+}

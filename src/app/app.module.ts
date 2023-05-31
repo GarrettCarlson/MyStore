@@ -12,6 +12,9 @@ import { HeaderComponent } from './layout/header/header.component';
 import { HttpClientModule } from '@angular/common/http';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -23,9 +26,10 @@ import { CartItemComponent } from './components/cart-item/cart-item.component';
     ProductListComponent,
     HeaderComponent,
     NavbarComponent,
-    CartItemComponent
+    CartItemComponent,
+    CheckoutComponent
   ],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })

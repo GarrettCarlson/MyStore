@@ -1,11 +1,20 @@
-.cart-container {
+.container {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  flex-direction: row;
   margin-top: 64px;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
+}
+
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  margin-left: 0;
+  margin-right: auto;
+  width: 70%;
+  padding-right: 5px;
 }
 
 .empty-cart-message {
@@ -15,4 +24,13 @@
   color: #cbd9f4;
   font-family: Arial, Helvetica, sans-serif;
   font-size: larger;
+}
+
+.checkout-container {
+  align-items: left;
+  padding: 10px;
+  border: 2px solid #cbd9f4;
+  background-color: #535f77;
+  color: #cbd9f4;
+  width: 30%;
 }
