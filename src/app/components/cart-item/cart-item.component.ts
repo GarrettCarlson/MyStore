@@ -31,8 +31,8 @@ export class CartItemComponent {
 
   ngOnInit() {}
 
-  updateProductQuantity(q: string): void {
-    const parsedQuantity = parseInt(q);
-    this.product.quantity = parsedQuantity;
+  onQuantityChange(event: number, product: Product): void {
+    const quantity = event;
+    this.cartService.updateProductQuantity(product, quantity);
   }
 }

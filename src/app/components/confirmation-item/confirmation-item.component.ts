@@ -9,6 +9,7 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class ConfirmationItemComponent {
   @Input() product: Product;
+
   name: string = '';
   price: number = 0;
   id: number = 0;
