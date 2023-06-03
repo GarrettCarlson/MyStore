@@ -1,0 +1,44 @@
+<div class="invoice-title">
+  <h1>Order Confirmed!</h1>
+</div>
+<div class="invoice-total">
+  <h2>Total: {{ invoiceDetails.cartTotal.toFixed(1) }} EHP</h2>
+</div>
+<div class="invoice-details">
+  <div class="invoice-line">
+    <p class="invoice-field">First Name</p>
+    <p class="invoice-value">{{ invoiceDetails.firstName }}</p>
+  </div>
+  <div class="invoice-line">
+    <p class="invoice-field">Last Name</p>
+    <p class="invoice-value">{{ invoiceDetails.lastName }}</p>
+  </div>
+  <div class="invoice-line">
+    <p class="invoice-field">Email</p>
+    <p class="invoice-value">{{ invoiceDetails.email }}</p>
+  </div>
+  <div class="invoice-line">
+    <p class="invoice-field">Address 1</p>
+    <p class="invoice-value">{{ invoiceDetails.addressLine1 }}</p>
+  </div>
+  <div class="invoice-line">
+    <p class="invoice-field">Address 2</p>
+    <p class="invoice-value">{{ invoiceDetails.addressLine2 }}</p>
+  </div>
+  <div class="invoice-line">
+    <p class="invoice-field">City</p>
+    <p class="invoice-value">{{ invoiceDetails.city }}</p>
+  </div>
+  <div class="invoice-line">
+    <p class="invoice-field">State</p>
+    <p class="invoice-value">{{ invoiceDetails.state }}</p>
+  </div>
+  <div class="invoice-line">
+    <p class="invoice-field">Zip Code</p>
+    <p class="invoice-value">{{ invoiceDetails.zipCode }}</p>
+  </div>
+  <div class="invoice-line">
+    <p class="invoice-field">Payment Address</p>
+    <p class="invoice-value">{{ invoiceDetails.paymentAddress }}</p>
+  </div>
+</div>

@@ -1,0 +1,161 @@
+<div class="form-title">
+  <h1>Checkout</h1>
+</div>
+<div class="form-total">
+  <h2>Total: {{ cartTotal.toFixed(1) }} EHP</h2>
+</div>
+<div class="ship-disclaimer">
+  Currently fulfilling 🇺🇸USA🇺🇸 orders only. International coming soon!
+</div>
+<form #form="ngForm" (ngSubmit)="onSubmit()" class="form">
+  <label for="firstName">First Name:</label>
+  <input
+    type="text"
+    required
+    minlength="1"
+    name="firstName"
+    [(ngModel)]="firstName"
+    id="firstName"
+    #firstNameInput="ngModel"
+  />
+  <div
+    *ngIf="firstNameInput.invalid && firstNameInput.dirty"
+    class="form-validation-errmsg"
+  >
+    Please enter first name.
+  </div>
+
+  <label for="lastName">Last Name:</label>
+  <input
+    type="text"
+    required
+    name="lastName"
+    [(ngModel)]="lastName"
+    id="lastName"
+    #firstNameInput="ngModel"
+  />
+  <div
+    *ngIf="firstNameInput.invalid && firstNameInput.dirty"
+    class="form-validation-errmsg"
+  >
+    Please enter last name.
+  </div>
+
+  <label for="email">Email:</label>
+  <input
+    type="text"
+    required
+    email
+    name="email"
+    [(ngModel)]="email"
+    id="email"
+    #lastNameInput="ngModel"
+  />
+  <div
+    *ngIf="lastNameInput.invalid && lastNameInput.dirty"
+    class="form-validation-errmsg"
+  >
+    Please enter email.
+  </div>
+
+  <label for="addressLine1">Address 1:</label>
+  <input
+    type="text"
+    required
+    name="addressLine1"
+    [(ngModel)]="addressLine1"
+    id="addressLine1"
+    #address1Input="ngModel"
+  />
+  <div
+    *ngIf="address1Input.invalid && address1Input.dirty"
+    class="form-validation-errmsg"
+  >
+    Please enter Address Line 1.
+  </div>
+
+  <label for="addressLine2">Address 2:</label>
+  <input
+    type="text"
+    name="addressLine2"
+    [(ngModel)]="addressLine2"
+    id="addressLine2"
+    #address2Input="ngModel"
+  />
+  <div
+    *ngIf="address2Input.invalid && address2Input.dirty"
+    class="form-validation-errmsg"
+  >
+    Please enter Address Line 2.
+  </div>
+
+  <label for="city">City:</label>
+  <input
+    type="text"
+    required
+    name="city"
+    [(ngModel)]="city"
+    id="city"
+    #cityInput="ngModel"
+  />
+  <div
+    *ngIf="cityInput.invalid && cityInput.dirty"
+    class="form-validation-errmsg"
+  >
+    Please enter city.
+  </div>
+
+  <label for="state">State:</label>
+  <select
+    name="state"
+    required
+    [(ngModel)]="state"
+    id="state"
+    #stateInput="ngModel"
+  >
+    <option value="" disabled>-</option>
+    <option *ngFor="let state of US_STATES" [value]="state">{{ state }}</option>
+  </select>
+  <div
+    *ngIf="stateInput.invalid && stateInput.dirty"
+    class="form-validation-errmsg"
+  >
+    Please enter state.
+  </div>
+
+  <label for="zipCode">Zip Code:</label>
+  <input
+    type="text"
+    required
+    name="zipCode"
+    minlength="5"
+    maxlength="5"
+    [(ngModel)]="zipCode"
+    id="zipCode"
+    #zipcodeInput="ngModel"
+  />
+  <div
+    *ngIf="zipcodeInput.invalid && zipcodeInput.dirty"
+    class="form-validation-errmsg"
+  >
+    Please enter zip code.
+  </div>
+
+  <label for="paymentAddress">Payment Address (ETH):</label>
+  <input
+    type="text"
+    required
+    pattern="^0x[a-fA-F0-9]{40}"
+    name="paymentAddress"
+    [(ngModel)]="paymentAddress"
+    id="paymentAddress"
+    #paymentInput="ngModel"
+  />
+  <div
+    *ngIf="paymentInput.invalid && paymentInput.dirty"
+    class="form-validation-errmsg"
+  >
+    Please enter valid payment address.
+  </div>
+  <button [disabled]="form.invalid">Place Order</button>
+</form>

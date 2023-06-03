@@ -1,1 +1,9 @@
-<p>confirmation works!</p>
+<div class="container" *ngIf="products.length > 0">
+  <div class="confirmation-container">
+    <app-confirmation-item *ngFor="let product of products" [product]="product">
+    </app-confirmation-item>
+  </div>
+  <div class="invoice-container">
+    <app-invoice></app-invoice>
+  </div>
+</div>
