@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Product } from '../models/product';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CartService {
   private cartKey = 'cart';
@@ -20,7 +20,7 @@ export class CartService {
 
   removeProductFromCart(product: Product): void {
     const cart = this.getCart();
-    const updatedCart = cart.filter(p => p.id !== product.id);
+    const updatedCart = cart.filter((p) => p.id !== product.id);
     localStorage.setItem(this.cartKey, JSON.stringify(updatedCart));
   }
 
@@ -32,7 +32,7 @@ export class CartService {
     const cart = this.getCart();
     let total = 0;
     for (const product of cart) {
-     total += product.price;
+      total += product.price;
     }
     return total;
   }

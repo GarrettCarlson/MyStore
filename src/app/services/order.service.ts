@@ -4,13 +4,13 @@ import { Product } from '../models/product';
 import { OrderDetails } from '../models/orderDetails';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class OrderService {
   private orderKey = 'order';
   private orderDetailsKey = 'orderdetails';
 
-  constructor(private cartService: CartService) { }
+  constructor(private cartService: CartService) {}
 
   addOrderDetails(o: OrderDetails): void {
     localStorage.setItem(this.orderDetailsKey, JSON.stringify(o));
@@ -36,7 +36,7 @@ export class OrderService {
     const cart = this.getOrder();
     let total = 0;
     for (const product of cart) {
-     total += product.price;
+      total += product.price;
     }
     return total;
   }

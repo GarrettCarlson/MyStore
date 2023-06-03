@@ -5,7 +5,7 @@ import { CartService } from 'src/app/services/cart.service';
 @Component({
   selector: 'app-confirmation-item',
   templateUrl: './confirmation-item.component.html',
-  styleUrls: ['./confirmation-item.component.css']
+  styleUrls: ['./confirmation-item.component.css'],
 })
 export class ConfirmationItemComponent {
   @Input() product: Product;
@@ -16,15 +16,15 @@ export class ConfirmationItemComponent {
   description: string = '';
   quantity: number = 0;
 
-  constructor (private cartService: CartService) {
+  constructor(private cartService: CartService) {
     this.product = {
       id: 0,
       name: '',
       price: 1,
       url: '',
       description: '',
-      quantity: 0
-    }
+      quantity: 0,
+    };
   }
 
   ngOnInit() {}

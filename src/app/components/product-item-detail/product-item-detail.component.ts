@@ -15,19 +15,20 @@ export class ProductItemDetailComponent {
   constructor(
     private productService: ProductService,
     private cartService: CartService,
-    private route: ActivatedRoute) {
+    private route: ActivatedRoute
+  ) {
     this.product = {
       id: 0,
       name: '',
       price: 1,
       url: '',
       description: '',
-      quantity: 0
-    }
+      quantity: 0,
+    };
   }
 
   ngOnInit() {
-    this.route.params.subscribe(params => {
+    this.route.params.subscribe((params) => {
       this.product.id = params['id'];
       console.log(this.product.id);
       this.productService.getProduct(this.product.id).subscribe((res) => {

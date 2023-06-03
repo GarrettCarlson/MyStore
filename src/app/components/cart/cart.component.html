@@ -1,12 +1,16 @@
 <div *ngIf="products.length === 0" class="empty-cart-message">
-    Your cart is empty.
+  Your cart is empty.
 </div>
 <div class="container" *ngIf="products.length > 0">
-<div class="cart-container">
-    <app-cart-item *ngFor="let product of products" [product]="product" (removeProductFromCart)="removeProduct(product)">
+  <div class="cart-container">
+    <app-cart-item
+      *ngFor="let product of products"
+      [product]="product"
+      (removeProductFromCart)="removeProduct(product)"
+    >
     </app-cart-item>
-</div>
-<div class="checkout-container">
+  </div>
+  <div class="checkout-container">
     <app-checkout></app-checkout>
-</div>
+  </div>
 </div>

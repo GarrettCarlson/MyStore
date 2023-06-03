@@ -8,7 +8,7 @@ import { OrderDetails } from 'src/app/models/orderDetails';
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
-  styleUrls: ['./checkout.component.css']
+  styleUrls: ['./checkout.component.css'],
 })
 export class CheckoutComponent {
   cartTotal: number = 0;
@@ -23,10 +23,12 @@ export class CheckoutComponent {
   paymentAddress: string = '';
   US_STATES: string[] = [];
 
-  constructor(private cartService: CartService,
+  constructor(
+    private cartService: CartService,
     private router: Router,
     private statesService: StatesService,
-    private orderService: OrderService) {}
+    private orderService: OrderService
+  ) {}
 
   ngOnInit(): void {
     this.cartTotal = this.cartService.getTotal();
@@ -51,10 +53,9 @@ export class CheckoutComponent {
       city: this.city,
       state: this.state,
       zipCode: this.zipCode,
-      paymentAddress: this.paymentAddress
-    }
+      paymentAddress: this.paymentAddress,
+    };
 
     return orderDetails;
   }
-
 }
