@@ -7,14 +7,15 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class CartService {
   private cartKey = 'cart';
-  private cartTotalSubject: BehaviorSubject<number> = new BehaviorSubject<number>(0);
+  private cartTotalSubject: BehaviorSubject<number> =
+    new BehaviorSubject<number>(0);
   cartTotal$ = this.cartTotalSubject.asObservable();
 
   private calculateTotal(): void {
     const cart = this.getCart();
     let total = 0;
     for (const product of cart) {
-      total += (product.price * product.quantity);
+      total += product.price * product.quantity;
     }
     this.cartTotalSubject.next(total);
   }

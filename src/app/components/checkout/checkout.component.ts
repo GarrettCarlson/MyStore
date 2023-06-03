@@ -33,9 +33,11 @@ export class CheckoutComponent {
   ) {}
 
   ngOnInit(): void {
-    this.cartTotalSubscription = this.cartService.cartTotal$.subscribe((total) => {
-      this.cartTotal = total;
-    });
+    this.cartTotalSubscription = this.cartService.cartTotal$.subscribe(
+      (total) => {
+        this.cartTotal = total;
+      }
+    );
     this.cartTotal = this.cartService.getTotal();
     this.US_STATES = this.statesService.getStates();
   }
@@ -60,7 +62,6 @@ export class CheckoutComponent {
       zipCode: this.zipCode,
       paymentAddress: this.paymentAddress,
     };
-
 
     return orderDetails;
   }
