@@ -1,1 +1,12 @@
-<p>confirmation works!</p>
+<div *ngIf="products.length === 0" class="empty-cart-message">
+    Something is really fucked up if you are seeing this.
+</div>
+<div class="container" *ngIf="products.length > 0">
+<div class="confirmation-container">
+    <app-confirmation-item *ngFor="let product of products" [product]="product">
+    </app-confirmation-item>
+</div>
+<div class="invoice-container">
+    <app-invoice></app-invoice>
+</div>
+</div>

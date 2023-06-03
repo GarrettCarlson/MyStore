@@ -14,6 +14,8 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { CartItemComponent } from './components/cart-item/cart-item.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { FormsModule } from '@angular/forms';
+import { InvoiceComponent } from './components/invoice/invoice.component';
+import { ConfirmationItemComponent } from './components/confirmation-item/confirmation-item.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { FormsModule } from '@angular/forms';
     HeaderComponent,
     NavbarComponent,
     CartItemComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    InvoiceComponent,
+    ConfirmationItemComponent
   ],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
