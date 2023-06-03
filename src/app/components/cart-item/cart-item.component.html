@@ -2,20 +2,21 @@
   <h3>{{ product.name }}</h3>
   <img src="{{ product.url }}" class="product-image" />
   <p class="price">{{ product.price.toFixed(1) }} EHP each</p>
-  <div class="select-input">
+  <form class="select-input">
     <label for="quantity">Quantity:</label>
     <input
+      [(ngModel)]="product.quantity"
       class="quantitySelector"
       type="number"
       id="quantity"
       name="quantity"
       value="{{ product.quantity }}"
-      min="0"
+      min="1"
       max="10"
       #quantity
-      (input)="updateProductQuantity(quantity.value)"
+      (ngModelChange)="onQuantityChange($event, product)"
     />
-  </div>
+  </form>
   <p class="price">
     {{ (product.price * product.quantity).toFixed(1) }} EHP total
   </p>

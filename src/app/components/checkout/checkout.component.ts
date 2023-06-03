@@ -1,9 +1,10 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { CartService } from 'src/app/services/cart.service';
 import { StatesService } from 'src/app/services/states.service';
 import { Router } from '@angular/router';
 import { OrderService } from 'src/app/services/order.service';
 import { OrderDetails } from 'src/app/models/orderDetails';
+import { Observable, of, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-checkout',
@@ -12,6 +13,7 @@ import { OrderDetails } from 'src/app/models/orderDetails';
 })
 export class CheckoutComponent {
   cartTotal: number = 0;
+  private cartTotalSubscription: Subscription = new Subscription();
   firstName: string = '';
   lastName: string = '';
   email: string = '';
@@ -31,6 +33,9 @@ export class CheckoutComponent {
   ) {}
 
   ngOnInit(): void {
+    this.cartTotalSubscription = this.cartService.cartTotal$.subscribe((total) => {
+      this.cartTotal = total;
+    });
     this.cartTotal = this.cartService.getTotal();
     this.US_STATES = this.statesService.getStates();
   }
@@ -44,7 +49,7 @@ export class CheckoutComponent {
 
   getOrderDetails(): OrderDetails {
     const orderDetails: OrderDetails = {
-      cartTotal: this.cartTotal,
+      cartTotal: +this.cartTotal,
       firstName: this.firstName,
       lastName: this.lastName,
       email: this.email,
@@ -56,6 +61,10 @@ export class CheckoutComponent {
       paymentAddress: this.paymentAddress,
     };
 
+
     return orderDetails;
+  }
+  ngOnDestroy(): void {
+    this.cartTotalSubscription.unsubscribe();
   }
 }
